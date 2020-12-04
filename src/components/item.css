@@ -1,0 +1,150 @@
+p {
+  color: var(--white);
+}
+
+.item-container {
+  margin-left: 10%;
+  margin-right: 10%;
+  border-bottom: 2px solid var(--grey);
+  padding: 30px 20px 20px 20px;
+}
+
+.event-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sub-title {
+  border-bottom: 2px solid var(--grey);
+  padding-bottom: 13px;
+  margin-bottom: 0;
+  font-size: var(--font-medium);
+  font-weight: bold;
+}
+
+.text-body {
+  color: var(--grey);
+  font-size: var(--font-normal);
+  letter-spacing: 1.8;
+  line-height: 1.7;
+}
+
+.left-section {
+  width: 15%;
+}
+
+.right-section {
+  width: 25%;
+}
+
+.right-section p,
+.right-section .time {
+  text-align: right;
+}
+
+.middle-section {
+  width: 50%;
+}
+
+.middle-section p {
+  text-align: left;
+}
+
+.description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.time {
+  width: 50%;
+  margin-left: 50%;
+}
+
+.date {
+  font-size: var(--font-large);
+  font-weight: bold;
+  display: table-caption;
+}
+
+.event-details {
+  color: var(--orange-color);
+  font-size: var(--font-normal);
+  width: 50%;
+}
+
+/* Tablet */
+
+@media only screen and (max-width: 769px) {
+  .item-container {
+    padding: 30px 0px 20px 0px;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .left-section {
+    width: 15%;
+  }
+
+  .right-section {
+    width: 30%;
+  }
+
+  .middle-section {
+    width: 50%;
+  }
+  .time {
+    width: 70%;
+    margin-left: 30%;
+  }
+}
+
+/* Phones */
+@media only screen and (max-width: 426px) {
+  .event-container {
+    display: block;
+  }
+
+  .right-section,
+  .left-section,
+  .middle-section {
+    width: 100%;
+    text-align: left;
+  }
+
+  .event-details {
+    width: 100%;
+    text-align: left;
+    margin-top: 25px;
+  }
+
+  .description {
+    display: none;
+  }
+
+  .right-section p,
+  .right-section .time {
+    text-align: left;
+  }
+  .time {
+    width: 40%;
+    margin-left: 0;
+  }
+  .sub-title,
+  .date {
+    font-size: var(--font-medium);
+  }
+
+  .date {
+    display: table-cell;
+  }
+  .date-superscript {
+    display: none;
+  }
+  .item-container {
+    padding: 30px 20px 20px 20px;
+  }
+}
