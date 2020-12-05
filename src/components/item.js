@@ -2,29 +2,26 @@
 
 import "./item.css";
 
-const Item = () => {
+const Item = (props) => {
+  const event = props.data;
   return (
     <div className="item-container">
       <div className="event-container">
         <div className="left-section">
           <p className="date">
-            11<span className="date-superscript">TH</span> NOV
+            {event.day}
+            <span className="date-superscript">TH</span> {event.month}
           </p>
         </div>
         <div className="middle-section">
-          <p className="sub-title">Second that the development</p>
-          <p className="text-body description">
-            Fruitcake gummi bears gingerbread tootsie roll cotton candy lollipop
-            bonbon pastry lemon drops. Jelly beans sweet halvah. Jelly-o tart
-            cookie pastry cotton candy tootsie roll. Tiramisu candy canes halvah
-            pie macaroon sweet roll sweet roll.
-          </p>
+          <p className="sub-title">{event.title}</p>
+          <p className="text-body description">{event.description}</p>
         </div>
         <div className="right-section">
-          <p className="sub-title time">16:00 - 19:00</p>
-          <p className="text-body">
-            Fruitcake gummi bears gingerbread tootsie roll cotton candy
+          <p className="time-tile">
+            <span className="time">{event.time}</span>
           </p>
+          <p className="text-body location">{event.location}</p>
         </div>
       </div>
       <p className="event-details">+ Event Details</p>

@@ -1,6 +1,8 @@
 import { RiMessageFill } from "react-icons/ri";
 import Item from "./../components/item";
 
+import { events } from "./../data/data";
+
 import "./App.css";
 
 const App = () => {
@@ -8,8 +10,9 @@ const App = () => {
     <div className="app">
       <div className="page-body">
         <h3>EVENTS</h3>
-        <Item />
-        <Item />
+        {events.map((event, index) => {
+          return <Item data={event} key={index} />;
+        })}
       </div>
       <button className="floating-btn">
         <RiMessageFill className="message-icon" />
