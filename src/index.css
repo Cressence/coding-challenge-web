@@ -1,11 +1,11 @@
 @font-face {
-  font-family: "Lato";
-  src: local("Lato"), url(./assets/fonts/Lato-Regular.ttf) format("ttf");
+  font-family: "Roboto";
+  src: local("Roboto"), url(./assets/fonts/Roboto.ttf) format("ttf");
 }
 
 body {
   margin: 0;
-  font-family: "Lato";
+  font-family: "Roboto";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
